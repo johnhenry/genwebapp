@@ -1,0 +1,12 @@
+<div class="navbar-header">
+  <a class="navbar-brand" href="#">Main</a>
+</div>
+<div class="navbar-collapse collapse">
+  <ul class="nav navbar-nav">
+    <li ng-class="{active : route() == '/demo/samples' }"><a href="#/demo/samples">Samples</a></li>
+    <li ng-class="{active : route() == '/demo/data' }"><a href="#/demo/data">Data</a></li>
+    <li ng-class="{active : route() == '/demo/react' }"><a href="#/demo/react">React</a></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right" ng-if="route() != '/'">
+  </ul>
+</div><!--/.nav-collapse -->

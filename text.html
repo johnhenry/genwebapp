@@ -1,0 +1,46 @@
+<style>
+    *{
+        box-sizing:border-box;
+        margin:0px;
+    }
+    body{
+        padding:0px;
+        margin:0px;
+    }
+    div{
+
+    }
+    .thing{
+        width:100%;
+        padding:0px;
+        position:absolute;
+        left:0px;
+    }
+</style>
+<div>
+    <select>
+        <option>Blank</option>
+        <option>Declaration Only</option>
+        <option>Declaratin + Header</option>
+        <option>Declaration + Header w/Session</option>
+
+    </select>
+    <div style="position:relative">
+        <div class="thing" style="top:0px;height:180px">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;<br />
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns2="http://object.api.zuora.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="http://api.zuora.com/"&gt;<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;SOAP-ENV:Header&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:SessionHeader&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ns1:session&gt;{{sessionToken}}&lt;/ns1:session&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ns1:SessionHeader&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/SOAP-ENV:Header&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;SOAP-ENV:Body&gt;<br />
+        </div>
+        <textarea class="thing" style="top:180px;height:300px;border:solid black 1px;border-top:dashed;border-bottom:dashed"></textarea>
+        <div class="thing" style="top:480px;height:60px">
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/SOAP-ENV:Body&gt;<br />
+&lt;/SOAP-ENV:Envelope&gt;<br />
+        </div>
+    </div>
+</div>

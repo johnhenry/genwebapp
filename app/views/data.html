@@ -1,0 +1,14 @@
+<p>This page uses the <strong>{{name}}</strong> controller.</p>
+<p>Here are some randomly generated data from the controller:</p>
+<span>{{randomData | arrayToPropFilter : "value" | joinArrayFilter : ' - '}}</span>
+<p>Here are those same data in a charted out with progress bars.</p>
+<dl>
+    <dt ng-repeat-start="datum in randomData track by $index">{{datum.label}}</dt>
+    <dd ng-repeat-end>
+        <div class="progress progress-striped active">
+          <div class="progress-bar" role="progressbar" aria-valuenow="{{datum.value}}" aria-valuemin="0" aria-valuemax="10" style="width: {{datum.value}}0%">{{datum.value}}</div>
+        </div>
+    </dd>
+</dl>
+<p>And here they are in a chart directive.</p>
+<div sample-chart="{{randomData}}"></div>

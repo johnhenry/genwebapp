@@ -1,0 +1,18 @@
+<p>This page uses the <strong>{{name}}</strong> controller.</p>
+<p>Here are a few sample directives.</p>
+<dl>
+    <dt>
+        <p>This is an interactive directive that uses pulls in Snap.svg as a service for animation.</p>
+    </dt>
+    <dd>
+       <span sample-svg></span>
+    </dd>
+    <dt>
+        <p>This directive shows how to use transclusion.</p>
+    </dt>
+    <dd>
+        <sample-transclusion secret-message="SECRET MESSAGE!!!">Click Me</sample-transclusion>
+    </dd>
+</dl>
+<p>Also, there is a footer.</p>
+<footer ng-include="'templates/footer.html'"></foot>

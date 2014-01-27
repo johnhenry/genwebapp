@@ -1,0 +1,273 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+body>p{
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+//CUSTOM
+
+
+//Tango Color Set
+//Source http://tango.freedesktop.org/Tango-Icon-Theme-Guidelines
+
+//Butter (Yellow)
+$tango-butter-1: #fce94f;
+$tango-butter-2: #edd400;
+$tango-butter-3: #c4a000;
+
+//Orange (Orange)
+$tango-orange-1: #fcaf3e;
+$tango-orange-2: #f57900;
+$tango-orange-3: #ce5c00;
+
+//Chocolate (Brown)
+$tango-chocholate-1: #e9b96e;
+$tango-chocholate-2: #c17d11;
+$tango-chocholate-3: #8f5902;
+
+//Chameleon (Green)
+$tango-chameleon-1: #8ae232;
+$tango-chameleon-2: #73d216;
+$tango-chameleon-3: #4e9a06;
+
+//Sky (Blue)
+$tango-sky-1: #729fcf;
+$tango-sky-2: #3465a4;
+$tango-sky-3: #204a87;
+
+//Plum (Purple)
+$tango-plum-1: #ad7fa8;
+$tango-plum-2: #75507b;
+$tango-plum-3: #5c3566;
+
+//Scarlet (r=Red)
+$tango-scarlet-1: #ef2920;
+$tango-scarlet-2: #cc0000;
+$tango-scarlet-3: #a40000;
+
+//Aluminium (Gray)
+$tango-aluminium-1: #eeeeec;
+$tango-aluminium-2: #d3d7cf;
+$tango-aluminium-3: #babdb6;
+$tango-aluminium-4: #888a85;
+$tango-aluminium-5: #555753;
+$tango-aluminium-6: #2e3436;
+
+//Splash Screen
+//Source http://www.youtube.com/watch?v=xOAG7Ab_Oz0&feature=youtu.be&t=10m20s
+//Source http://stackoverflow.com/questions/21294917/creating-a-splash-screen-using-ng-cloak
+#ng-splash[data-ng-cloak]{
+    display: block !important;
+    position: absolute;
+    left:0px;
+    top:0px;
+    max-width:100%;
+    width:100%;
+    max-height:100%;
+    height:100%;
+    z-index:10000;
+    background-color:#ffffff;
+}
+#ng-splash:not([data-ng-cloak]){
+    display: block;
+}
+
+//Nav-Side Classes
+//Add .nav-left or .nav-right to your .navbar class to make it stick to the side
+//Add .nav-full-width for a full screen menu.
+//Responsive features have been disabled
+//WARNING BUG: .nav-bottom/right is length of the entire screen
+    //Example: .nav-left{width:50%;} .nav-left .nav-bottom li selected {background-color:red;}
+        //This wil cause a highlighed red bar to strech across the screen
+    //Suggested Work Around: Style nav-bottom/right and children accourdingly
+    //Suggested Work Around: As this is most apparent with nav-left, user nav-right instead
+    //Suggested Work Around: Wrap nav-bottom-/right in {position:relative;width:100%;display:blockx}
+        //(Missing the poing of this library)
+    //Suggested Work Around: Avoid using the nav-bottom/right when using nav-left or nav-right
+
+.nav-side {
+    z-index: 1030;
+    margin-left: 0px;
+    position: fixed;
+    top:0px;
+    bottom: 0px;
+    overflow-y: auto;
+    margin-bottom: 0px !important;
+    .navbar-nav {
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar-brand {
+      display:block;
+      float:none;
+    }
+    .navbar-collapse {
+        padding-left:0px !important;
+        padding-right:0px !important;
+        display: block !important;
+        border-top: none;
+    }
+    .navbar-toggle {
+        display:none !important;
+    }
+    .navbar-nav li {
+      width:100%;
+      text-indent: 20px;
+      float: none;
+    }
+    .navbar-nav li a {
+        display: block;
+        padding:15px !important;
+    }
+    .navbar-bottom, .navbar-right{
+        position:fixed;
+        bottom: 0px;
+        width:100%;
+        float: none;
+        :last-child{
+            margin-right:auto !important;
+        }
+    }
+}
+
+.nav-left{
+    @extend .nav-side;
+    left:0px;
+}
+.nav-right{
+    @extend .nav-side;
+    right:0px;
+}
+.nav-full-width{
+    @extend .nav-left;
+    @extend .nav-right;
+    width:100%;
+}
+
+//Customizations
+
+//Splash Screen
+#ng-splash{
+    background-color:$tango-aluminium-6 !important;
+    opacity:1;
+    content:"Loading";
+    text-align:center;
+    line-height: 50%;
+}
+//Removed Round Corners from .navbar
+.navbar,.footer{
+    border-radius:0px;
+}
+//Navigation Bar
+body > nav, .container > nav{
+    @extend .navbar;
+    @extend .navbar-inverse;
+    @extend .navbar-fixed-top;
+    margin-bottom: 0px !important;
+}
+
+body > aside{
+    @extend .navbar;
+    @extend .nav-left;
+    @extend .navbar-inverse;
+    width: 200px;
+}
+
+//Footer
+body > footer, .container > footer{
+    @extend .footer;
+    @extend .navbar;
+    @extend .navbar-inverse;
+    @extend .navbar-fixed-bottom;
+}
+//View
+[ng-view]{
+    margin-left:200px;
+}
